@@ -29,7 +29,6 @@ class GraphViewController: UIViewController {
                 self.brain.setVariable("M", value: Double (x))
                 return self.brain.evaluate()
             }
-
             updateUI()
         }
     }
@@ -42,21 +41,11 @@ class GraphViewController: UIViewController {
             brain.program = program!
             let descript = brain.description.componentsSeparatedByString(",").last ?? " "
             title = "y = " + descript ?? " "
-            cashData = [CGFloat : CGFloat]()
             updateUI()
         }
     }
     
-    private var cashData = [CGFloat : CGFloat]()
-    
     var brain = CalculatorBrain()
-    
-    let defaults = NSUserDefaults.standardUserDefaults()
-    private struct Keys {
-        static let Scale = "GraphViewController.Scale"
-        static let Origin = "GraphViewController.Origin"
-    }
-
     
     func updateUI() {
         graphView?.setNeedsDisplay()
@@ -85,6 +74,12 @@ class GraphViewController: UIViewController {
         super.viewWillDisappear(animated)
         scale = graphView.scale
         originRelative = graphView.originRelativeToCenter
+    }
+    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    private struct Keys {
+        static let Scale = "GraphViewController.Scale"
+        static let Origin = "GraphViewController.Origin"
     }
     
 }

@@ -18,8 +18,7 @@
 		E4D735C31AFA48D1003EB410 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D735C21AFA48D1003EB410 /* GraphViewController.swift */; };
 		E4D735C91AFA5FB1003EB410 /* AxesDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D735C81AFA5FB1003EB410 /* AxesDrawer.swift */; };
 		E4D735CB1AFB5717003EB410 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D735CA1AFB5717003EB410 /* GraphView.swift */; };
-		E4E7091F1B01C23B0030C18E /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7091E1B01C23B0030C18E /* TextViewController.swift */; };
-		E4E709211B01CF530030C18E /* StatisticsGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E709201B01CF530030C18E /* StatisticsGraphViewController.swift */; };
+		E4E709211B01CF530030C18E /* FavoritesGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E709201B01CF530030C18E /* FavoritesGraphViewController.swift */; };
 		E4E709231B03C1E40030C18E /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E709221B03C1E40030C18E /* FavoritesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +47,7 @@
 		E4D735C21AFA48D1003EB410 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		E4D735C81AFA5FB1003EB410 /* AxesDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxesDrawer.swift; sourceTree = "<group>"; };
 		E4D735CA1AFB5717003EB410 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		E4E7091E1B01C23B0030C18E /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
-		E4E709201B01CF530030C18E /* StatisticsGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsGraphViewController.swift; sourceTree = "<group>"; };
+		E4E709201B01CF530030C18E /* FavoritesGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesGraphViewController.swift; sourceTree = "<group>"; };
 		E4E709221B03C1E40030C18E /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		E4F977461AE14C7C00957AE3 /* Calculator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Calculator.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,8 +94,7 @@
 				E4F977461AE14C7C00957AE3 /* Calculator.playground */,
 				E48677C61A83DC010087A9CA /* CalculatorViewController.swift */,
 				E4D735C21AFA48D1003EB410 /* GraphViewController.swift */,
-				E4E709201B01CF530030C18E /* StatisticsGraphViewController.swift */,
-				E4E7091E1B01C23B0030C18E /* TextViewController.swift */,
+				E4E709201B01CF530030C18E /* FavoritesGraphViewController.swift */,
 				E4D735CA1AFB5717003EB410 /* GraphView.swift */,
 				E4D735C81AFA5FB1003EB410 /* AxesDrawer.swift */,
 				E48677E41A83DC7D0087A9CA /* CalculatorBrain.swift */,
@@ -238,12 +235,11 @@
 			files = (
 				E48677E51A83DC7D0087A9CA /* CalculatorBrain.swift in Sources */,
 				E4D735C31AFA48D1003EB410 /* GraphViewController.swift in Sources */,
-				E4E709211B01CF530030C18E /* StatisticsGraphViewController.swift in Sources */,
+				E4E709211B01CF530030C18E /* FavoritesGraphViewController.swift in Sources */,
 				E4E709231B03C1E40030C18E /* FavoritesTableViewController.swift in Sources */,
 				E48677C71A83DC010087A9CA /* CalculatorViewController.swift in Sources */,
 				E48677C51A83DC010087A9CA /* AppDelegate.swift in Sources */,
 				E4D735C91AFA5FB1003EB410 /* AxesDrawer.swift in Sources */,
-				E4E7091F1B01C23B0030C18E /* TextViewController.swift in Sources */,
 				E4D735CB1AFB5717003EB410 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

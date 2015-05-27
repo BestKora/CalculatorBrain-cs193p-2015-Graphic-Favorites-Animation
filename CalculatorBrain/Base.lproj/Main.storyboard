@@ -1427,10 +1427,10 @@
             </objects>
             <point key="canvasLocation" x="1322" y="-175.5"/>
         </scene>
-        <!--Statistics Graph View Controller-->
+        <!--Favorites Graph View Controller-->
         <scene sceneID="Nlk-7R-EOe">
             <objects>
-                <viewController id="nHi-0K-XPY" customClass="StatisticsGraphViewController" customModule="CalculatorBrain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nHi-0K-XPY" customClass="FavoritesGraphViewController" customModule="CalculatorBrain" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kJY-pB-a6X"/>
                         <viewControllerLayoutGuide type="bottom" id="M4x-Dn-mcA"/>
@@ -1454,24 +1454,10 @@
                                             <action selector="addFavorite" destination="nHi-0K-XPY" eventType="touchUpInside" id="jod-lp-zll"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmK-fz-wnM">
-                                        <rect key="frame" x="467" y="8" width="125" height="30"/>
-                                        <state key="normal" title="Show Favorites">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="Yg8-T0-exN" kind="popoverPresentation" identifier="Show Favorites" popoverAnchorView="DmK-fz-wnM" id="9Od-gH-ta6">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="DmK-fz-wnM" firstAttribute="trailing" secondItem="9j5-ZS-Kv4" secondAttribute="trailing" id="J3l-y3-q5U"/>
-                                    <constraint firstItem="DmK-fz-wnM" firstAttribute="top" secondItem="ycJ-2K-qty" secondAttribute="topMargin" id="K3Q-ry-bPz"/>
                                     <constraint firstItem="9j5-ZS-Kv4" firstAttribute="bottom" secondItem="ycJ-2K-qty" secondAttribute="bottomMargin" id="UVA-Qx-wvn"/>
-                                    <constraint firstItem="DmK-fz-wnM" firstAttribute="leading" secondItem="9j5-ZS-Kv4" secondAttribute="leading" id="WYD-tH-8WX"/>
                                     <constraint firstItem="9j5-ZS-Kv4" firstAttribute="trailing" secondItem="ycJ-2K-qty" secondAttribute="trailingMargin" id="qxj-jg-YYY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -1496,9 +1482,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xq3-AH-P5x">
-                        <barButtonItem key="rightBarButtonItem" title="Statistics" id="Gu8-qo-cdy">
+                        <barButtonItem key="rightBarButtonItem" title="Show Favorites" id="Gu8-qo-cdy">
                             <connections>
-                                <segue destination="K4j-kg-5DB" kind="popoverPresentation" identifier="Show Statistics" popoverAnchorBarButtonItem="Gu8-qo-cdy" id="U65-bF-W5A">
+                                <segue destination="Yg8-T0-exN" kind="popoverPresentation" identifier="Show Favorites" popoverAnchorBarButtonItem="Gu8-qo-cdy" id="1ru-CP-bcc">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -1560,42 +1546,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aqa-Y9-APf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="561"/>
-        </scene>
-        <!--Text View Controller-->
-        <scene sceneID="vrS-hp-1Yw">
-            <objects>
-                <viewController id="K4j-kg-5DB" customClass="TextViewController" customModule="CalculatorBrain" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qK4-Op-ofF"/>
-                        <viewControllerLayoutGuide type="bottom" id="FOo-h8-WOq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UPK-KP-CzK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOr-kQ-YZj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="EOr-kQ-YZj" firstAttribute="bottom" secondItem="FOo-h8-WOq" secondAttribute="top" id="56G-MU-zbX"/>
-                            <constraint firstAttribute="trailing" secondItem="EOr-kQ-YZj" secondAttribute="trailing" id="FpJ-pK-IHG"/>
-                            <constraint firstItem="EOr-kQ-YZj" firstAttribute="top" secondItem="UPK-KP-CzK" secondAttribute="top" id="OYa-SL-zdg"/>
-                            <constraint firstItem="EOr-kQ-YZj" firstAttribute="leading" secondItem="UPK-KP-CzK" secondAttribute="leading" id="xFQ-wQ-oeH"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="textView" destination="EOr-kQ-YZj" id="DPq-fr-M00"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dHV-wH-GT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2045" y="-145"/>
         </scene>
         <!--Favorites Table View Controller-->
         <scene sceneID="Ryu-4l-isu">
