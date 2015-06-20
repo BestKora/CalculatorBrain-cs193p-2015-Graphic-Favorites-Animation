@@ -68,8 +68,10 @@ class FavoritesGraphViewController: GraphViewController, UIPopoverPresentationCo
   //----- кнопка Play для запуска анимации добавляется на верхнюю панель справа
     override func viewDidLoad() {
         super.viewDidLoad()
-              // also add camera icon
-            let animationButton = UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: "animateGraphs:")
+              // also add Play icon
+            let animationButton = UIBarButtonItem(barButtonSystemItem: .Play,
+                                                               target: self,
+                                                               action: "animateGraphs:")
             if let button = navigationItem.rightBarButtonItem {
                 navigationItem.rightBarButtonItems = [button,animationButton]
             } else {
