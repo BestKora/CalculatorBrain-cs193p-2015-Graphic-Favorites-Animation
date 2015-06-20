@@ -69,11 +69,11 @@ class FavoritesGraphViewController: GraphViewController, UIPopoverPresentationCo
     override func viewDidLoad() {
         super.viewDidLoad()
               // also add camera icon
-            let cameraButton = UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: "animateGraphs:")
+            let animationButton = UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: "animateGraphs:")
             if let button = navigationItem.rightBarButtonItem {
-                navigationItem.rightBarButtonItems = [button,cameraButton]
+                navigationItem.rightBarButtonItems = [button,animationButton]
             } else {
-                navigationItem.rightBarButtonItem = cameraButton
+                navigationItem.rightBarButtonItem = animationButton
             }
     }
    //----- action для анимации----
