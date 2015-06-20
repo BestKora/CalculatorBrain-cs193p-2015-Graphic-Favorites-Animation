@@ -43,7 +43,7 @@ class FavoritesGraphViewController: GraphViewController, UIPopoverPresentationCo
                         self.favoritePrograms.removeAtIndex(index)
                     }
                     // description closure
-                    ftvc.descriptionProgram = { [unowned self] (controller, index) in
+                    ftvc.descriptionProgram = {[unowned self] (controller, index) in
                         self.brain.program =  self.favoritePrograms[index]
                         return self.brain.description.componentsSeparatedByString(",").last ?? ""
                         
@@ -65,5 +65,38 @@ class FavoritesGraphViewController: GraphViewController, UIPopoverPresentationCo
           return UIModalPresentationStyle.None
     }
     
+  //----- кнопка Play для запуска анимации добавляется на верхнюю панель справа
+    override func viewDidLoad() {
+        super.viewDidLoad()
+              // also add camera icon
+            let cameraButton = UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: "animateGraphs:")
+            if let button = navigationItem.rightBarButtonItem {
+                navigationItem.rightBarButtonItems = [button,cameraButton]
+            } else {
+                navigationItem.rightBarButtonItem = cameraButton
+            }
+    }
+   //----- action для анимации----
+   // случайно выбираем график из списка favoritePrograms
+   // случайно выбираем тип анимации из списка optionsAnimation
+    func animateGraphs(sender: UIBarButtonItem) {
+        if favoritePrograms.count > 0 {
+            let i = Int(arc4random_uniform(UInt32(favoritePrograms.count)))
+            let optionsAnimation = [UIViewAnimationOptions.TransitionFlipFromLeft,
+                UIViewAnimationOptions.TransitionCrossDissolve,
+                UIViewAnimationOptions.TransitionCurlUp,
+                UIViewAnimationOptions.TransitionCrossDissolve,
+                UIViewAnimationOptions.TransitionCurlDown,
+                UIViewAnimationOptions.TransitionFlipFromBottom,
+                UIViewAnimationOptions.TransitionFlipFromTop]
+            let j = Int(arc4random_uniform(UInt32(optionsAnimation.count)))
+            
+            UIView.transitionWithView(graphView!, duration: 0.75,
+                options: optionsAnimation[j],
+                animations: { [unowned self] in self.program = self.favoritePrograms[i]},
+                completion: nil)
+            
+        }
+    }
 }
 
